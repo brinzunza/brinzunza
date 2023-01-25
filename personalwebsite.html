@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .scroll-left {
+            height: 50px;
+            overflow: hidden;
+            position: relative;
+            background: #DCDCDC;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .scroll-left p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            animation: scroll-left 8s linear infinite;
+        }
+
+        /* Move it (define the animation) */
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+            p.vert {
+                writing-mode: vertical-rl;
+                text-align: right;
+            }
+
+            span.vert {
+                writing-mode: vertical-rl;
+                text-align: right;
+            }
+        }
+    </style>
+
+    <div class="scroll-left">
+        <p style="font-size: 30px;font-family: verdana"><strong><i>website under construction</i></strong></p>
+    </div>
+
+
+
+    </style>
+</head>
+
+<body style="background-color: #FFFFF0">
+
+    <h1>Bruno Inzunza</h1>
+
+
+    <p class="vert">Est. 2022</p>
+
+</body>
+
+</html>
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9017886957045535" crossorigin="anonymous"></script>
+
+</html>
