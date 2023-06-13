@@ -1,8 +1,6 @@
 - 👋 Hi, I’m @brinzunza
-- 👀 I’m interested in learning how to code.
-- 🌱 I’m currently learning how to code
-- 💞️ I’m looking to collaborate on coding projects
-- 📫 How to reach me ...
+- 👀 Currently a student at University of Wisconsin-Madison
+- 📫 bruno.inzunza24@gmail.com
 
 <!---
 brinzunza/brinzunza is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
