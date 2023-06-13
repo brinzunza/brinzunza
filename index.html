@@ -65,12 +65,12 @@
             display: block;
             width: 100%;
             padding: 10px;
-            border: 1;
+            border: 0;
             background-color: inherit;
-            color: #000;
+            color: black;
             text-align: left;
             cursor: pointer;
-            margin-top: px;
+            margin-top: 0px;
         }
 
         .side-tabs button.active {
@@ -102,7 +102,7 @@
 
 
     <div class="side-tabs">
-        <button class="tab-button" onclick="openSection(event, 'section1')">Home</button>
+        <button class="tab-button active" onclick="openSection(event, 'section1')">Home</button>
         <button class="tab-button" onclick="openSection(event, 'section2')">Software Development</button>
         <button class="tab-button" onclick="openSection(event, 'section3')">Financial Development</button>
         <button class="tab-button" onclick="openSection(event, 'section4')">Physical Development</button>
@@ -121,22 +121,22 @@
         </body>
     </div>
 
-    <div id="section2" class="section">
+    <div id="section2" class="section" style="display: none">
         <h1>Software Projects and Development</h1>
         <p>As a striving programmer and software developer, this page is dedicated to the personal projects and practice taken to develop my personal programming skills.</p>
     </div>
 
-    <div id="section3" class="section">
+    <div id="section3" class="section" style="display: none">
         <h1>Personal Finances</h1>
         <p>As a person striving for financial freedom, this page is dedicated to the path needed to be financially literate to set yourself up for financial success.</p>
     </div>
 
-    <div id="section4" class="section">
+    <div id="section4" class="section" style="display: none">
         <h1>Physical Training and Development</h1>
         <p>As a health enthusiast, this page is dedicated to the physical training I go through to stay in shape.</p>
     </div>
 
-    <div id="section5" class="section">
+    <div id="section5" class="section" style="display: none">
         <h1>Contacts and Links</h1>
         <div>
         <p class="business-link">My Business Website: <a href="bruninvestor.com">bruninvestor.com</a></p>
