@@ -1,67 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<style> 
-.scroll-left {
- height: 50px;	
- overflow: hidden;
- position: relative;
- background: #DCDCDC;
- color: white;
- border: 1px solid black;
-}
-.scroll-left p {
- position: absolute;
- width: 100%;
- height: 100%;
- margin: 0;
- line-height: 50px;
- text-align: center;
- /* Starting position */
- transform:translateX(100%);
- /* Apply animation to this element */
- animation: scroll-left 8s linear infinite;
-}
-/* Move it (define the animation) */
-@keyframes scroll-left {
- 0%   {
- transform: translateX(100%); 		
- }
- 100% {
- transform: translateX(-100%); 
- }
- p.vert {
-  writing-mode: vertical-rl; 
-  text-align: right;
-}
+    <style>
+        /* Title on home page */
 
-span.vert {
-  writing-mode: vertical-rl; 
-  text-align: right;
-}
-}
-</style>
+        .main-header {
+            font-size: 100px;
+            font-family: monospace, sans-serif;
+        }
 
-<div class="scroll-left">
-<p style="font-size: 30px;font-family: verdana"><strong><i>website under construction</i></strong></p>
-</div>
+        /* Bottom bar with scroll animation */
+
+        .bottom-bar {
+            font-family: Verdana;
+            font-size: 30px;
+        }
+
+        .scroll-left {
+            height: 50px;
+            overflow: hidden;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #DCDCDC;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .scroll-left p {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            transform: translateX(100%);
+            animation: scroll-left 8s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+        /* The side tabs meant to jump to different pages and organization */
+
+        .side-tabs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100vh;
+            background-color: grey;
+        }
+
+        .side-tabs button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1;
+            background-color: inherit;
+            color: #000;
+            text-align: left;
+            cursor: pointer;
+            margin-top: px;
+        }
+
+        .side-tabs button.active {
+            background-color: blue;
+        }
+
+
+        /* Different sections */
+
+        .section {
+            margin-left: 150px;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        /* Links */
+        .business-link {
+            font-size: 20px;
+        }
+    </style>
 
 
 
-</style>
+    <div class="scroll-left">
+        <p class="bottom-bar"><strong><i>BRUNO INZUNZA</i></strong></p>
+    </div>
+
+
+
+
+    <div class="side-tabs">
+        <button class="tab-button" onclick="openSection(event, 'section1')">Home</button>
+        <button class="tab-button" onclick="openSection(event, 'section2')">Software Development</button>
+        <button class="tab-button" onclick="openSection(event, 'section3')">Financial Development</button>
+        <button class="tab-button" onclick="openSection(event, 'section4')">Physical Development</button>
+        <button class="tab-button" onclick="openSection(event, 'section5')">Contact/Links</button>
+    </div>
+
+    <div id="section1" class="section">
+
+        <body>
+
+            <h1 class="main-header">Bruno Inzunza</h1>
+
+
+            <p class="bio">Est. 2022</p>
+
+        </body>
+    </div>
+
+    <div id="section2" class="section">
+        <h1>Software Projects and Development</h1>
+        <p>As a striving programmer and software developer, this page is dedicated to the personal projects and practice taken to develop my personal programming skills.</p>
+    </div>
+
+    <div id="section3" class="section">
+        <h1>Personal Finances</h1>
+        <p>As a person striving for financial freedom, this page is dedicated to the path needed to be financially literate to set yourself up for financial success.</p>
+    </div>
+
+    <div id="section4" class="section">
+        <h1>Physical Training and Development</h1>
+        <p>As a health enthusiast, this page is dedicated to the physical training I go through to stay in shape.</p>
+    </div>
+
+    <div id="section5" class="section">
+        <h1>Contacts and Links</h1>
+        <div>
+        <p class="business-link">My Business Website: <a href="bruninvestor.com">bruninvestor.com</a></p>
+        <img src="https://photos.app.goo.gl/jyRZJqQ56USUHg259">
+        </div>
+        
+        <div>
+            <p>Github: <a href="https://github.com/brinzunza">@brinzunza</a></p>
+        </div>
+        
+        <div>
+            <p>Personal Email: bruno.inzunza24@gmail.com</p>
+        </div>
+        
+        <div>
+            <p>Business Email: bruninvestor@gmail.com</p>
+        </div>
+        
+        <div>
+            <p>Business Twitter: <a href="twitter.com/bruninvestor">@bruninvestor</a></p>
+        </div>
+        
+        <div>
+            <p>Business Instagram: <a href="instagram.com/bruninvestor">@bruninvestor</a></p>
+        </div>
+        
+        <div>
+            <p>Personal Website: <a href="brunoinzunza.com">brunoinzunza.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        function openSection(evt, sectionId) {
+            var i, sections, tabButtons;
+
+            // Hide all content sections
+            sections = document.getElementsByClassName("section");
+            for (i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+
+            // Remove "active" class from all tab buttons
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+
+            // Show the selected content section and set the button as active
+            document.getElementById(sectionId).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
 </head>
-<body style="background-color: #FFFFF0">
 
-<h1>Bruno Inzunza</h1>
-
-
-<p class="vert">Est. 2022</p>
-
-</body>
-</html>
-
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9017886957045535"
-     crossorigin="anonymous"></script>
 </html>
