@@ -1,5 +1,6 @@
-- 👋 Hi, I’m @brinzunza
-- 👀 Currently a student at University of Wisconsin-Madison
+- I'm @brinzunza, a programmer and developer student
+- Currently a student at University of Wisconsin-Madison studying for a Bachelors in Computer Science and Data Science.
+- Interested in Software Development and Machine Learning
 - 📫 bruno.inzunza24@gmail.com
 
 <!---
